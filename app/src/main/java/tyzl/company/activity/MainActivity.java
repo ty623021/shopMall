@@ -71,6 +71,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
         titleView = (TitleView) findViewById(R.id.title);
         ivHome = (ImageView) findViewById(R.id.tab_home_icon);
         tvHome = (TextView) findViewById(R.id.tab_home_text);
