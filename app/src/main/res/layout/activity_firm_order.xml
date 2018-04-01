@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <tyzl.company.weight.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"></tyzl.company.weight.TitleView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/include2"
+            android:layout_alignParentTop="true">
+
+            <include
+                android:id="@+id/include1"
+                layout="@layout/goods_receipt_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/include1"
+                android:background="@null"></ListView>
+
+            <LinearLayout
+                android:id="@+id/remarks_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listView"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/linear_gray_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_right_12"
+                    android:text="买家留言：" />
+
+                <tyzl.company.weight.EditTextWithDel
+                    android:id="@+id/et_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:background="@null"
+                    android:hint="选填：请对本次交易备注"
+                    android:maxLength="18"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="@dimen/size_sp_12" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_line"
+                android:layout_below="@+id/remarks_linear"
+                android:background="@color/gray_line_default"></View>
+
+            <RelativeLayout
+                android:id="@+id/coupon_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_below="@+id/view1"
+                android:background="@drawable/linear_gray_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_right_12"
+                    android:text="优惠券：" />
+
+                <TextView
+                    android:id="@+id/tv_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_left_right_12"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:drawableRight="@drawable/shopping_right"
+                    android:singleLine="true"
+                    android:text="无可用优惠券"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="@dimen/size_sp_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/firm_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"></include>
+    </RelativeLayout>
+
+</RelativeLayout>

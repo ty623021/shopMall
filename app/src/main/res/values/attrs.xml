@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BGAMoocStyleRefreshView">
+        <attr name="mv_ultimateColor" format="reference|color" />
+        <attr name="mv_originalImg" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ChooseEditText">
+        <attr name="cet_ChooseBgColor" format="reference|color" />
+        <attr name="cet_ChooseTextColor" format="reference|color" />
+        <attr name="cet_TextSize" format="reference|dimension" />
+        <attr name="cet_Hint" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="DashView">
+        <attr name="dashWidth" format="dimension" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="dashOrientation" format="integer" />
+    </declare-styleable>
+
+    <!--圆形进度条-->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+
+</resources>

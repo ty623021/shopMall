@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical">
+
+    <tyzl.company.weight.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </tyzl.company.weight.TitleView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+
+        <RelativeLayout
+            android:id="@+id/search_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/search_history_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:text="历史搜索"
+                        android:textColor="@color/black_text"
+                        android:textSize="@dimen/size_sp_micro" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:background="@drawable/search_close" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_line"
+                    android:background="@color/gray_line_default"></View>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/search_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:max_select="1">
+
+                </com.zhy.view.flowlayout.TagFlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_history_linear"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:gravity="center_vertical"
+                    android:text="热门搜索"
+                    android:textColor="@color/black_text"
+                    android:textSize="@dimen/size_sp_micro" />
+
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/search_hot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:max_select="1">
+
+                </com.zhy.view.flowlayout.TagFlowLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></ListView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

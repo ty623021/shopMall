@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/taking_pictures"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:background="@drawable/layout_background"
+        android:gravity="center"
+        android:text="拍照上传"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_line"
+        android:background="@color/global_line_color"></View>
+
+    <TextView
+        android:id="@+id/local"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:background="@drawable/layout_background"
+        android:gravity="center"
+        android:text="相册上传"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_sp_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_7.5"
+        android:background="@color/gray_background"></View>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:background="@drawable/layout_background"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_sp_14" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_5"
+        android:background="@color/gray_background"></View>
+</LinearLayout>

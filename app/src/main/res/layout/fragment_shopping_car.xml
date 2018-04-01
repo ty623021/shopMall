@@ -1,0 +1,87 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/layout_background">
+    <include
+        layout="@layout/loading_layout"
+        android:visibility="gone"
+        />
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <!--<tyzl.company.weight.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />-->
+
+   <!-- <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/button_color"
+            android:layout_gravity="top"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="购物车"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_sp_18" />
+
+            <TextView
+                android:id="@+id/tv_edite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_18"
+                android:gravity="center_vertical"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_sp_medium" />
+        </RelativeLayout>
+   <!-- </android.support.design.widget.AppBarLayout>-->
+
+<tyzl.company.pullview.AbPullToRefreshView
+    android:layout_marginTop="44dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refresh_pull"
+    >
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+   <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:id="@+id/rv"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+    </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.NestedScrollView>
+</tyzl.company.pullview.AbPullToRefreshView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="tyzl.company.weight.ScrollBehavior"
+        >
+        <include layout="@layout/settlement" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

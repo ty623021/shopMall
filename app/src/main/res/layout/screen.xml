@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right_12"
+            android:layout_marginTop="@dimen/margin_15"
+            android:text="价格"
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/size_sp_small" />
+
+        <LinearLayout
+            android:id="@+id/price_linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:layout_below="@+id/tv_price"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right_12"
+                android:layout_weight="1"
+                android:text="价格区间(元)"
+                android:textColor="@color/color_b2b2b2"
+                android:textSize="@dimen/size_sp_micro" />
+
+            <EditText
+                android:id="@+id/et_min_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_search_bg"
+                android:gravity="center"
+                android:hint="最低价"
+                android:inputType="phone"
+                android:maxLength="8"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:singleLine="true"
+                android:textColor="@drawable/selector_goods_space_tv_color"
+                android:textColorHint="@color/color_b2b2b2"
+                android:textSize="@dimen/size_sp_micro">
+
+            </EditText>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:src="@drawable/remove_selector" />
+
+            <EditText
+                android:id="@+id/et_max_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_left_right_12"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_search_bg"
+                android:gravity="center"
+                android:hint="最高价"
+                android:inputType="phone"
+                android:maxLength="8"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:singleLine="true"
+                android:textColor="@drawable/selector_goods_space_tv_color"
+                android:textColorHint="@color/color_b2b2b2"
+                android:textSize="@dimen/size_sp_micro"></EditText>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_line"
+            android:layout_below="@+id/price_linear"
+            android:layout_marginLeft="@dimen/margin_left_right_12"
+            android:layout_marginRight="@dimen/margin_left_right_12"
+            android:layout_marginTop="@dimen/margin_25"
+            android:background="@color/global_line_color"></View>
+
+        <ExpandableListView
+            android:id="@+id/screen_type_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linear"
+            android:layout_below="@+id/view1"
+            android:layout_marginLeft="@dimen/margin_left_right_12"
+            android:layout_marginRight="@dimen/margin_left_right_12"
+            android:groupIndicator="@null"
+            android:scrollbars="none">
+
+        </ExpandableListView>
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="5">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="2"
+                android:background="@drawable/layout_gray_background"
+                android:text="重置"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_sp_medium" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_alignParentRight="true"
+                android:layout_weight="3"
+                android:background="@drawable/shape_rect_settlement"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_sp_medium" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

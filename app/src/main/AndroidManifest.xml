@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tyzl.company">
+
+    <!-- 允许应用程序联网，以便向我们的服务器端发送数据 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+
+    <application
+        android:name=".main.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1105258776" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <!--<intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>-->
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--首页-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--引导页-->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--欢迎页-->
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--获取区-->
+        <activity
+            android:name=".activity.address.AreaActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--获取市-->
+        <activity
+            android:name=".activity.address.CityActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--获取省-->
+        <activity
+            android:name=".activity.address.ProvinceActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--新建地址-->
+        <activity
+            android:name=".activity.address.CreateAddressActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--管理地址-->
+        <activity
+            android:name=".activity.address.ManageAddressActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--选择址地-->
+        <activity
+            android:name=".activity.address.SelectAddressActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--确认订单-->
+        <activity
+            android:name=".activity.shopping.FirmOrderActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--商品列表-->
+        <activity
+            android:name=".activity.shopping.GoodsListActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--优惠券-->
+        <activity
+            android:name=".activity.shopping.CouponActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--搜索页面-->
+        <activity
+            android:name=".activity.shopping.SearchActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--消息-->
+        <activity
+            android:name=".activity.main.MessageListActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--商品详情-->
+        <activity
+            android:name=".activity.shopping.GoodsDetailsActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--查看物流-->
+        <activity
+            android:name=".activity.shopping.StepActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--支付页面-->
+        <activity
+            android:name=".activity.shopping.PayActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--支付成功-->
+        <activity
+            android:name=".activity.shopping.PaySuccessActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--支付失败-->
+        <activity
+            android:name=".activity.shopping.PayFailActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--注册-->
+        <activity
+            android:name=".activity.center.UserRegisterActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--注册(输入密码)-->
+        <activity
+            android:name=".activity.center.RegisterInputPasswordActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--注册成功-->
+        <activity
+            android:name=".activity.center.UserRegisterSuccessActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--登录-->
+        <activity
+            android:name=".activity.center.UserLoginActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--忘记密码-->
+        <activity
+            android:name=".activity.center.UserLoginForgetPasswordActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--忘记密码（输入密码）-->
+        <activity
+            android:name=".activity.center.UserLoginInputNewPasswordActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--账户设置-->
+        <activity
+            android:name=".activity.center.AccountSettingActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--修改登录密码-->
+        <activity
+            android:name=".activity.center.ChangeLoginPasswordActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--修改登录密码下一步-->
+        <activity
+            android:name=".activity.center.ChangeLoginPasswordNextActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--修改登录密码成功-->
+        <activity
+            android:name=".activity.center.ChangeLoginPasswordSuccessActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--修改手机号码-->
+        <activity
+            android:name=".activity.center.ChangePhoneNumberActivity"
+            android:theme="@style/ActivityTheme"></activity>
+        <!--修改手机号码下一步-->
+        <activity
+            android:name=".activity.center.ChangePhoneNumberNextActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--修改手机号码成功-->
+        <activity
+            android:name=".activity.center.ChangePhoneNumberSuccessActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--修改呢称-->
+        <activity
+            android:name=".activity.center.ChangeSaidActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--订单管理-->
+        <activity
+            android:name=".activity.center.OrderMangerActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--用户个人信息页面-->
+        <activity
+            android:name=".activity.center.UserInformationActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+        <!--选择性别-->
+        <activity
+            android:name=".activity.center.ChooseGenderActivity"
+            android:theme="@style/ActivityTheme"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. androi d:value="@integer/google_play_services_version"-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="8487000" />
+
+        <!--我的优惠券-->
+        <activity
+            android:name=".activity.center.MyCouponActivity"
+            android:theme="@style/ActivityTheme"></activity>
+
+
+    </application>
+
+</manifest>

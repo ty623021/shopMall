@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">company</string>
+    <string name="action_settings">Settings</string>
+
+    <!--首页-->
+    <string name="tab_home">首页</string>
+    <string name="tab_type">分类</string>
+    <string name="tab_shop">购物车</string>
+    <string name="tab_person">我</string>
+
+<!-- 个人中心-->
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="input_istrue_phone">请输入正确的手机号码</string>
+    <string name="input_phone">请输入手机号码</string>
+    <string name="input_istrue_code">请输入正确的验证码</string>
+    <string name="input_istrue_graph_code">请输入正确的图形验证码</string>
+    <string name="input_phone_false">账号错误</string>
+    <string name="input_password_false">密码错误</string>
+    <string name="input_istrue_password_amount">密码应为8-20个字符</string>
+    <string name="load_finish">没有更多数据了</string>
+
+    <string name="time">timepicker</string>
+
+
+
+    </resources>

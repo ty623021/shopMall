@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical">
+
+    <tyzl.company.weight.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></tyzl.company.weight.TitleView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="@drawable/layout_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_35"
+            android:drawableLeft="@drawable/pay_fail"
+            android:drawablePadding="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_left_right_12"
+            android:text="购买失败"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_sp_small" />
+
+
+        <Button
+            android:id="@+id/go_pay"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/layout_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_70"
+            android:background="@drawable/shape_btn_background_blue"
+            android:text="再次支付"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

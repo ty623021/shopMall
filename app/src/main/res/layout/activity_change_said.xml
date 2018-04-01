@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical">
+
+    <tyzl.company.weight.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></tyzl.company.weight.TitleView>i
+
+    <tyzl.company.weight.EditTextWithDel
+        android:id="@+id/said_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@drawable/layout_background"
+        android:hint="请输入您要修改的呢称"
+        android:paddingLeft="@dimen/margin_12"
+        android:singleLine="true"
+        android:textColor="@color/color_000000"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/size_sp_12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_12"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="4-20个字符，可由中、英文、数字组成"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_sp_11" />
+
+</LinearLayout>

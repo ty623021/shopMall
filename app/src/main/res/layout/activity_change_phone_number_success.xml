@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <tyzl.company.weight.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></tyzl.company.weight.TitleView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_25"
+        android:src="@drawable/success_sign" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_15"
+        android:text="手机号码修改成功"
+        android:textColor="@color/main_color" />
+
+
+    <Button
+        android:id="@+id/know_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_12"
+        android:layout_marginRight="@dimen/margin_12"
+        android:layout_marginTop="@dimen/margin_50"
+        android:background="@drawable/shape_btn_background_blue"
+        android:text="我知道了"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_sp_18" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_background">
+
+        <TextView
+            android:id="@+id/over_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/margin_5"
+            android:text="已过期"
+            android:textColor="@drawable/selector_tab_text_color" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

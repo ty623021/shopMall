@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/home_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <tyzl.company.pullview.AbPullToRefreshView
+                android:id="@+id/pull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/layout_background"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/home_header_layout"></include>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/home_goods"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+            </tyzl.company.pullview.AbPullToRefreshView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_liner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_30"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/shape_search_main_select"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/home_search_icon" />
+
+                <TextView
+                    android:id="@+id/search_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:text="请输入搜索内容"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_sp_micro" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/message_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/margin_11"
+                android:background="@drawable/shape_round_red_radius_10"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/shopping_number"
+                    android:layout_width="@dimen/dp_4"
+                    android:layout_height="@dimen/dp_4"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="9"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_sp_min_micro" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/loading_layout"></include>
+
+</RelativeLayout>

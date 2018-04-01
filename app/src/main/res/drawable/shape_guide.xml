@@ -1,0 +1,20 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape>
+            <!-- 填充的颜色 -->
+            <solid android:color="@color/white" />
+            <stroke android:width="@dimen/dp_1" android:color="@color/blue_text_color"></stroke>
+            <!-- 设置按钮的四个角为弧形 -->
+            <corners android:radius="5dp"></corners>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <!-- 填充的颜色 -->
+            <solid android:color="@color/white_pressed" />
+            <stroke android:width="@dimen/dp_1" android:color="@color/blue_text_color"></stroke>
+            <!-- 设置按钮的四个角为弧形 -->
+            <corners android:radius="5dp"></corners>
+        </shape>
+    </item>
+</selector>
